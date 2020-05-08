@@ -18,17 +18,17 @@ namespace Bakery
 
       Console.ForegroundColor = ConsoleColor.DarkGreen;
       Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-      Console.WriteLine("Welcome to Pierre's, home of grandma's baked goods. ");
-      Console.WriteLine("Our favorites are: Artisanal bread loaves & danishes!");
+      Console.WriteLine("Welcome to Pierre's, home of grandma's baked goods!");
+      Console.WriteLine("Our favorites are: Artisanal Bread Loaves & Danishes!");
       Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-      Console.ForegroundColor = ConsoleColor.DarkRed;
+      Console.ForegroundColor = ConsoleColor.DarkBlue;
       Console.WriteLine("Would you like to know our pricing & specials?");
 
       string response = (Console.ReadLine().ToLower());
       if (response == "yes")
       {
         participate = true;
-        
+
         Console.ForegroundColor = ConsoleColor.DarkGreen;
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         Console.WriteLine("Pierre's is at your service!");
@@ -39,7 +39,8 @@ namespace Bakery
       else
       {
         participate = false;
-        Console.WriteLine("That's too bad, I suppose you could try Larry's Bagel Bruiser's down the road!");
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.WriteLine("That's too bad dear Grandma Pierre said with a sickeningly cheerful smile. You hear deadbolts slide and click into place. Suddenly realizing that behind you are Larry's Bagel Bruiser's who have filled the small quaint rustic room! Thinking better of it you decide to make a small purchase. After all the specials are spectacular!");
       }
     }
     public static void TakeOrder()
@@ -47,8 +48,10 @@ namespace Bakery
       int loafAmt = 0;
       int danishAmt = 0;
 
+      Console.ForegroundColor = ConsoleColor.DarkBlue;
       Console.WriteLine("Our hostess will now take your order!");
       Console.WriteLine("How many artisanal loaves would you like to purchase?");
+      Console.ForegroundColor = ConsoleColor.DarkGreen;
       Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
       string loaf = Console.ReadLine();
@@ -67,10 +70,18 @@ namespace Bakery
         customerDanish.SetDanish(danishAmt);
 
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
         Console.WriteLine("Thank you for giving Pierre's Bakery your buisness. Your Total is: $"+(customerDanish.GetDanish()+customerLoaf.GetLoaf()));
+
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
       }
       else
       {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine("Sorry, you can only purchase whole loaves & danishes!");
       } 
     }
