@@ -18,15 +18,26 @@ namespace Bakery.Pierre
 
     private void LoafCost()
     {
-      int loaf = 5;
+      int pricePerLoaf = 5;
 
       if (_numberOfLoaves % 3 == 0)
       {
-        _loafCost = (loaf * _numberOfLoaves) - ((_loafCost/3)*loaf);
+        _loafCost = (pricePerLoaf * _numberOfLoaves) - ((_loafCost / 3) * pricePerLoaf);
       }
-      else if (_loafCost<3)
+      else if (_loafCost < 3)
       {
-        _loafCost = loaf * _numberOfLoaves;
+        _loafCost = pricePerLoaf * _numberOfLoaves;
+      }
+      else
+      {
+        if ((_numberOfLoaves - 1) % 3 == 0)
+        {
+          _loafCost = (pricePerLoaf * (_numberOfLoaves - 1)) - ((_numberOfLoaves / 3) * pricePerLoaf) + pricePerLoaf;
+        }
+        else
+        {
+          _loafCost = (pricePerLoaf * (_numberOfLoaves - 2)) - ((_numberOfLoaves / 3) * pricePerLoaf) + (pricePerLoaf * 2);
+        }
       }
     }
 
