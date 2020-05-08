@@ -22,9 +22,9 @@ namespace Bakery.Pierre
 
       if (_numberOfLoaves % 3 == 0)
       {
-        _loafCost = (pricePerLoaf * _numberOfLoaves) - ((_loafCost / 3) * pricePerLoaf);
+        _loafCost = (pricePerLoaf * _numberOfLoaves) - ((_numberOfLoaves / 3) * pricePerLoaf);
       }
-      else if (_loafCost < 3)
+      else if (_numberOfLoaves < 3)
       {
         _loafCost = pricePerLoaf * _numberOfLoaves;
       }
