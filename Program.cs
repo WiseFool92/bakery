@@ -1,6 +1,7 @@
 using System;
 using Bakery;
 using Bakery.Pierre;
+//using Console = Colorful.Console;
 
 namespace Bakery
 {
@@ -14,15 +15,26 @@ namespace Bakery
     public static void Welcome()
     {
       bool participate = false;
-      Console.WriteLine("Welcome to Pierre's, home of grandma's baked goods. Our current favorites are our artisanal bread loaves & danishes!");
+
+      Console.ForegroundColor = ConsoleColor.DarkGreen;
+      Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+      Console.WriteLine("Welcome to Pierre's, home of grandma's baked goods. ");
+      Console.WriteLine("Our favorites are: Artisanal bread loaves & danishes!");
+      Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+      Console.ForegroundColor = ConsoleColor.DarkRed;
       Console.WriteLine("Would you like to know our pricing & specials?");
+
       string response = (Console.ReadLine().ToLower());
       if (response == "yes")
       {
         participate = true;
+        
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         Console.WriteLine("Pierre's is at your service!");
         Console.WriteLine("Bread loaves are: $5 each Or three for $10");
         Console.WriteLine("Danish's are: $2 each Or three for $5");
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
       }
       else
       {
@@ -37,6 +49,7 @@ namespace Bakery
 
       Console.WriteLine("Our hostess will now take your order!");
       Console.WriteLine("How many artisanal loaves would you like to purchase?");
+      Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
       string loaf = Console.ReadLine();
       bool loafParse = int.TryParse(loaf, out loafAmt);
@@ -53,6 +66,7 @@ namespace Bakery
         Pastry customerDanish = new Pastry();
         customerDanish.SetDanish(danishAmt);
 
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         Console.WriteLine("Thank you for giving Pierre's Bakery your buisness. Your Total is: $"+(customerDanish.GetDanish()+customerLoaf.GetLoaf()));
       }
       else
