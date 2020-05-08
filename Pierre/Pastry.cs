@@ -2,25 +2,68 @@ namespace Bakery.Pierre
 {
   public class Pastry
   {
-    public int NumberOfDanish { get; set; }
-    public int CostPerDanish { get; set; }
-    public int TotalDanish { get; set; }
+    private int _numberOfDanish { get; set; }
+    private int _danishCost { get; set; }
 
-    public Pastry()
+    public Danish()
     {
-      NumberOfDanish;
-      CostPerDanish = 2;
-      TotalDanish;
+      _numberOfDanish = numberOfDanish;
+      _danishCost = danishCost;
+      danishCost = 0;
     }
-    public int CalculateDanish()
+    public int GetDanish()
     {
-      TotalDanish = 0;
-      TotalDanish = (NumberOfDanish * CostPerDanish);
-      if (NumberOfDanish == 3)
+      DanishCost();
+      return _danishCost;
+    }
+
+    private void DanishCost()
+    {
+      int danish = 2;
+
+      if (_numberOfDanish % 3 == 0)
       {
-        TotalDanish;
+        _danishCost = (_numberOfDanish / 3) * 5;
       }
-      return TotalDanish;
+      else if (_numberOfDanish < 3)
+      {
+        _danishCost = danish * _numberOfDanish;
+      }
+      else
+      {
+        if ((_numberOfDanish - 1) % 3 ==0)
+        {
+          _danishCost = ((_numberOfDanish - 1) / 3) * 5 + danish;
+        }
+        else
+        {
+          _danishCost = ((_numberOfDanish - 1) / 3) * 5 + (danish * 2);
+        }
+      }
     }
+
+    // First Attempt
+
+    // public int NumberOfDanish { get; set; }
+    // public int CostPerDanish { get; set; }
+    // public int TotalDanish { get; set; }
+
+    // public Pastry()
+    // {
+    //   NumberOfDanish;
+    //   CostPerDanish = 2;
+    //   TotalDanish;
+    // }
+
+    // public int CalculateDanish()
+    // {
+    //   TotalDanish = 0;
+    //   TotalDanish = (NumberOfDanish * CostPerDanish);
+    //   if (NumberOfDanish == 3)
+    //   {
+    //     TotalDanish --;
+    //   }
+    //   return TotalDanish;
+    // }
   }
 }
