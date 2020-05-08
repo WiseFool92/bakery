@@ -12,7 +12,7 @@ namespace Bakery.Pierre
       DanishCost();
       return _danishCost;
     }
-    public int SetDanish(int numberOfDanish)
+    public void SetDanish(int numberOfDanish)
     {
       _numberOfDanish = numberOfDanish;
     }

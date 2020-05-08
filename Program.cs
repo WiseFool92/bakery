@@ -22,8 +22,8 @@ namespace Bakery
       {
         participate = true;
         Console.WriteLine("Pierre's is at your service!");
-        Console.WriteLine("Bread loaves: $5 each Or three for $10");
-        Console.WriteLine("Danish's: $2 each Or three for $5");
+        Console.WriteLine("Bread loaves are: $5 each Or three for $10");
+        Console.WriteLine("Danish's are: $2 each Or three for $5");
       }
       else
       {
