@@ -1,4 +1,4 @@
-# _Bakery_
+# _Pierre's Bakery_
 
 #### May 8th, 2020
 
