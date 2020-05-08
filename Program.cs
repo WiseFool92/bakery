@@ -13,15 +13,15 @@ namespace Bakery
     public static void Welcome()
     {
       bool participate = false;
-      Console.WriteLine("Welcome to Pierre's, home of grandma's baked goods. Our current favorites are our breads & pastries!");
+      Console.WriteLine("Welcome to Pierre's, home of grandma's baked goods. Our current favorites are our artisanal bread loaves & danishes!");
       Console.WriteLine("Would you like to know our pricing & specials?");
       string response = (Console.ReadLine().ToLower());
       if (response == "yes")
       {
         participate = true;
         Console.WriteLine("Pierre's is at your service!");
-        Console.WriteLine("Bread: $5 each Or three for $10");
-        Console.WriteLine("Pastries: $2 each Or three for $5");
+        Console.WriteLine("Bread loaves: $5 each Or three for $10");
+        Console.WriteLine("Danish's: $2 each Or three for $5");
       }
       else
       {
@@ -31,8 +31,21 @@ namespace Bakery
     }
     public static void TakeOrder()
     {
-      Console.WriteLine("What would you like to purchase today?");
+      int loafAmt = 0;
+      int danishAmt = 0;
 
+      Console.WriteLine("Our hostess will now take your order!");
+      Console.WriteLine("How many artisanal loaves would you like to purchase?");
+
+      string loaf = Console.ReadLine();
+      bool loafParse = int.TryParse(loaf, out loafAmt);
+
+      Console.WriteLine("How many artisanal danish's would you like to purchase?");
+
+      string danish = Console.ReadLine();
+      bool danishParse = int.TryParse(danish, out danishAmt);
+
+      
     }
   }
 }
