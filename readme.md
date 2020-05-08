@@ -4,9 +4,9 @@
 
 ## Description
 
-_This console application _
+_This console application will allow the user to buy items from a bakery that has special deals_
 
-_This site is already linked to an index.html, styles.css, jQuery.js(3.4.1), scripts.js., main.js, jest, babel, lint, webpack, json, & gitignore_
+_This application is already linked to a Program.cs, .csproj, & .gitignore, but will need a .NET 3.1 or 2.2 download_
 
 ## Setup/Installation Requirements
 
@@ -45,13 +45,11 @@ git clone {link to repository}
 #### Bakery
 |                          Behavior                          | Input  | Output  |
 | :--------------------------------------------------------: | :----: | :-----: |
-| The program will ask the user if they have any animals | 'y' | 'Accepts animal data'  |
-| The program will ask the user about the animals species & age | 'tiger' '3' | 'holds data & asks if there is another' |
-| If the user responds with | 'n' | 'program stops' |
-| If the user responds with | 'y' | 'the program asks for more inputs' |
-| If the user responds with show | 'show' | 'the program displays (in console) the animals added so far' |
-
-
+| The program will welcome the user | 'dontnet run' | 'Welcome to Pierre's'  |
+| The program will tell the user how much bread/pastries cost | 'dotnet run' | '1 bread loaf = $5, with a buy two get one free special', '1 pastry = $2 or 3 for $5' |
+| The program will ask the user what they would like to buy | 'Bread and/or Pastries' | 'holds response data' |
+| The program tells the user how much their order will cost | '2 loaves (get another free) & 3 pastries' | '$15' |
+| The program thanks the user for their buisness | 'N/A' | 'Thank you for your time' |
 
 ---
 ## Known Bugs
@@ -69,10 +67,8 @@ _Email: watkins92@gmail.com_
 ---
 ## Built With
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Simple Scaffolding
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Used for interactivity in the page
-- [jQuery](https://jquery.com/) - Used to interact with the DOM
-- [Bootstrap 4.4](https://getbootstrap.com/) - Used for styling
+- [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
+- [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## Useful tools
 
