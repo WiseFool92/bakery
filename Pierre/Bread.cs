@@ -5,13 +5,13 @@ namespace Bakery.Pierre
     private int _numberOfLoaves { get; set; }
     private int _loafCost { get; set; }
 
-    public Bread()
+    public void Loaf()
     {
       _numberOfLoaves = numberOfLoaves;
       _loafCost = loafCost;
       loafCost = 0;
     }
-    public int GetBread()
+    public int GetLoaf()
     {
       LoafCost();
       return _loafCost;

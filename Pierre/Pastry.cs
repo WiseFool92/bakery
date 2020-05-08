@@ -5,7 +5,7 @@ namespace Bakery.Pierre
     private int _numberOfDanish { get; set; }
     private int _danishCost { get; set; }
 
-    public Danish()
+    public void Danish()
     {
       _numberOfDanish = numberOfDanish;
       _danishCost = danishCost;
