@@ -16,6 +16,10 @@ namespace Bakery.Pierre
       DanishCost();
       return _danishCost;
     }
+    public int SetDanish(int numberOfDanish)
+    {
+      _numberOfDanish = numberOfDanish;
+    }
 
     // Calculates the cost for pastries
     private void DanishCost()
