@@ -17,6 +17,7 @@ namespace Bakery.Pierre
       return _danishCost;
     }
 
+    // Calculates the cost for pastries
     private void DanishCost()
     {
       int danish = 2;

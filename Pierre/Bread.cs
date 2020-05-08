@@ -17,6 +17,7 @@ namespace Bakery.Pierre
       return _loafCost;
     }
 
+    // Calculates the cost for loaves of bread
     private void LoafCost()
     {
       int pricePerLoaf = 5;

@@ -8,6 +8,7 @@ namespace Bakery
     public static void Main()
     {
       Welcome();
+      TakeOrder();
     }
     public static void Welcome()
     {
@@ -28,9 +29,10 @@ namespace Bakery
         Console.WriteLine("That's too bad, I suppose you could try Larry's Bagel Bruiser's down the road!");
       }
     }
-    public static void Error()
+    public static void TakeOrder()
     {
-      
+      Console.WriteLine("What would you like to purchase today?");
+
     }
   }
 }
