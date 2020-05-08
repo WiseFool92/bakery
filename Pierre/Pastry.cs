@@ -2,15 +2,11 @@ namespace Bakery.Pierre
 {
   public class Pastry
   {
-    private int _numberOfDanish { get; set; }
-    private int _danishCost { get; set; }
+    // private int _danishCost = 0;
+    // private int _numberOfDanish;
+    public int _numberOfDanish { get; set; }
+    public int _danishCost { get; set; }
 
-    public void Danish()
-    {
-      _numberOfDanish = numberOfDanish;
-      _danishCost = danishCost;
-      danishCost = 0;
-    }
     public int GetDanish()
     {
       DanishCost();

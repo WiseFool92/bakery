@@ -2,15 +2,9 @@ namespace Bakery.Pierre
 {
   public class Bread
   {
-    private int _numberOfLoaves { get; set; }
-    private int _loafCost { get; set; }
+    public int _numberOfLoaves { get; set; }
+    public int _loafCost { get; set; }
 
-    public void Loaf()
-    {
-      _numberOfLoaves = numberOfLoaves;
-      _loafCost = loafCost;
-      loafCost = 0;
-    }
     public int GetLoaf()
     {
       LoafCost();
