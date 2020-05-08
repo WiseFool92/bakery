@@ -1,4 +1,6 @@
 using System;
+using Bakery;
+using Bakery.Pierre;
 //using System.Collections.Generic;
 
 namespace Bakery
@@ -45,7 +47,19 @@ namespace Bakery
       string danish = Console.ReadLine();
       bool danishParse = int.TryParse(danish, out danishAmt);
 
-      
+      if (loafParse && danishParse && loafAmt >= 0 && danishAmt >= 0)
+      {
+        Bread customerLoaf = new Bread();
+        customerLoaf.SetLoaf(loafAmt);
+        Pastry customerDanish = new Pastry();
+        customerDanish.SetDanish(danishAmt);
+
+        Console.WriteLine("Thank you for giving Pierre's Bakery your buisness. Your Total is: $"+(customerDanish.GetDanish()+customerLoaf.GetLoaf()));
+      }
+      else
+      {
+        Console.WriteLine("Sorry, you can only purchase whole loaves & danishes!");
+      } 
     }
   }
 }
