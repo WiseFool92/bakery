@@ -9,6 +9,7 @@ namespace Bakery.Pierre
     {
       _numberOfLoaves = numberOfLoaves;
       _loafCost = loafCost;
+      loafCost = 0;
     }
     public int GetBread()
     {
@@ -41,17 +42,7 @@ namespace Bakery.Pierre
       }
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    // First Attempt
 
     // public int NumberOfLoaves { get; set; }
     // public int CostPerLoaf { get; set; }
