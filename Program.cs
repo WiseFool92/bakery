@@ -1,7 +1,6 @@
 using System;
 using Bakery;
 using Bakery.Pierre;
-//using System.Collections.Generic;
 
 namespace Bakery
 {
