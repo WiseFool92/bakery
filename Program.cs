@@ -8,9 +8,21 @@ namespace Bakery
     public static void Main()
     {
       bool participate = false;
-      Console.WriteLine("Welcome to Pierre's, home of grandma's baked goods. Our current favorites are breads & pastries!");
+      Console.WriteLine("Welcome to Pierre's, home of grandma's baked goods. Our current favorites are our breads & pastries!");
       Console.WriteLine("Would you like to know our pricing & specials?");
-      
+      string response = (Console.ReadLine().ToLower());
+      if (response == "yes")
+      {
+        participate = true;
+        Console.WriteLine("Pierre's is at your service!");
+        Console.WriteLine("Bread: $5 each Or three for $10");
+        Console.WriteLine("Pastries: $2 each Or three for $5");
+      }
+      else
+      {
+        participate = false;
+        Console.WriteLine("That's too bad, I suppose you could try Larry's Bagel Bruiser's down the road!");
+      }
     }
   }
 }
