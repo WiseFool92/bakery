@@ -1,7 +1,5 @@
 using System;
-using Bakery;
-using Bakery.Pierre;
-//using Console = Colorful.Console;
+using Bakery.Models;
 
 namespace Bakery
 {
@@ -64,16 +62,14 @@ namespace Bakery
 
       if (loafParse && danishParse && loafAmt >= 0 && danishAmt >= 0)
       {
-        Bread customerLoaf = new Bread();
-        customerLoaf.SetLoaf(loafAmt);
-        Pastry customerDanish = new Pastry();
-        customerDanish.SetDanish(danishAmt);
+        Bread customerLoaf = new Bread(loafAmt);
+        Pastry customerDanish = new Pastry(danishAmt);
 
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         Console.ForegroundColor = ConsoleColor.DarkMagenta;
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-        Console.WriteLine("Thank you for giving Pierre's Bakery your buisness. Your Total is: $"+(customerDanish.GetDanish()+customerLoaf.GetLoaf()));
+        Console.WriteLine("Thank you for giving Pierre's Bakery your buisness. Your Total is: $"+(customerDanish.GrabDanish()+customerLoaf.GrabLoaf()));
 
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
